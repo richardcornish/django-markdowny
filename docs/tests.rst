@@ -3,14 +3,14 @@
 Tests
 *****
 
-`Continuous integration test results <https://travis-ci.org/richardcornish/django-markdownify>`_ are available online.
+`Continuous integration test results <https://travis-ci.org/richardcornish/django-markdowny>`_ are available online.
 
 However, you can also test the source code.
 
 .. code-block:: bash
 
    $ workon myvenv
-   $ django-admin test markdownify.tests --settings="markdownify.tests.settings"
+   $ django-admin test markdowny.tests --settings="markdowny.tests.settings"
    
    Creating test database for alias 'default'...
    ..........

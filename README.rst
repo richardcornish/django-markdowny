@@ -1,31 +1,31 @@
-Django Markdownify
-******************
+Django Markdowny
+****************
 
 |PyPI version|_ |Build status|_
 
 .. |PyPI version| image::
-   https://badge.fury.io/py/django-markdownify.svg
-.. _PyPI version: https://pypi.python.org/pypi/django-markdownify
+   https://badge.fury.io/py/django-markdowny.svg
+.. _PyPI version: https://pypi.python.org/pypi/django-markdowny
 
 .. |Build status| image::
-   https://travis-ci.org/richardcornish/django-markdownify.svg?branch=master
-.. _Build status: https://travis-ci.org/richardcornish/django-markdownify
+   https://travis-ci.org/richardcornish/django-markdowny.svg?branch=master
+.. _Build status: https://travis-ci.org/richardcornish/django-markdowny
 
-**Django Markdownify** is a `Django <https://www.djangoproject.com/>`_ `template tag <https://docs.djangoproject.com/en/1.11/howto/custom-template-tags/>`_ application to convert `Markdown <http://daringfireball.net/projects/markdown/>`_ to HTML.
+**Django Markdowny** is a `Django <https://www.djangoproject.com/>`_ `template tag <https://docs.djangoproject.com/en/1.11/howto/custom-template-tags/>`_ application to convert `Markdown <http://daringfireball.net/projects/markdown/>`_ to HTML.
 
-Unlike other Django/Markdown filters, Markdownify supports all of the options available in `Python Markdown <https://pythonhosted.org/Markdown/reference.html>`_ via settings.
+Unlike other Django/Markdown filters, Markdowny supports all of the options available in `Python Markdown <https://pythonhosted.org/Markdown/reference.html>`_ via settings.
 
-* `Package distribution <https://pypi.python.org/pypi/django-markdownify>`_
-* `Code repository <https://github.com/richardcornish/django-markdownify>`_
-* `Documentation <https://django-markdownify.readthedocs.io/>`_
-* `Tests <https://travis-ci.org/richardcornish/django-markdownify>`_
+* `Package distribution <https://pypi.python.org/pypi/django-markdowny>`_
+* `Code repository <https://github.com/richardcornish/django-markdowny>`_
+* `Documentation <https://django-markdowny.readthedocs.io/>`_
+* `Tests <https://travis-ci.org/richardcornish/django-markdowny>`_
 
 Install
 =======
 
 .. code-block:: bash
 
-   $ pip install django-markdownify
+   $ pip install django-markdowny
 
 Add to ``settings.py``.
 
@@ -33,7 +33,7 @@ Add to ``settings.py``.
 
    INSTALLED_APPS = [
        # ...
-       'markdownify',
+       'markdowny',
    ]
 
 Usage
@@ -43,9 +43,9 @@ Usage
 
    {% load markdownify_tags %}
 
-   {% markdownify %}
+   {% markdowny %}
    # Hello, world!
-   {% endmarkdownify %}
+   {% endmarkdowny %}
 
 Result:
 

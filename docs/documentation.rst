@@ -3,7 +3,7 @@
 Documentation
 *************
 
-`Full documentation <https://django-markdownify.readthedocs.io/>`_ is available online.
+`Full documentation <https://django-markdowny.readthedocs.io/>`_ is available online.
 
 However, you can also build the documentation from source. Enter your `virtual environment <https://virtualenv.pypa.io/>`_.
 
@@ -15,8 +15,8 @@ Clone the code repository.
 
 .. code-block:: bash
 
-   $ git clone git@github.com:richardcornish/django-markdownify.git
-   $ cd django-markdownify/
+   $ git clone git@github.com:richardcornish/django-markdowny.git
+   $ cd django-markdowny/
 
 Install `Sphinx <http://www.sphinx-doc.org/>`_, |sphinx-autobuild|_, and |sphinx_rtd_theme|_.
 

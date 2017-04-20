@@ -9,15 +9,15 @@ Install with the `pip <https://pip.pypa.io/en/stable/>`_ package manager.
 
    $ mkvirtualenv myvenv -p python3
    $ pip install django
-   $ pip install django-markdownify
+   $ pip install django-markdowny
 
-After `creating a project <https://docs.djangoproject.com/en/1.11/intro/tutorial01/>`_, add ``markdownify`` to ``INSTALLED_APPS`` in ``settings.py``.
+After `creating a project <https://docs.djangoproject.com/en/1.11/intro/tutorial01/>`_, add ``markdowny`` to ``INSTALLED_APPS`` in ``settings.py``.
 
 .. code-block:: python
 
    INSTALLED_APPS = [
        # ...
-       'markdownify',
+       'markdowny',
    ]
 
 Remember to update your ``requirements.txt`` file. In your project directory:

@@ -25,9 +25,9 @@ matrix:
     - python: "3.3"
       env: DJANGO_VERSION=1.11
 before_install:
-    - export DJANGO_SETTINGS_MODULE="markdownify.tests.settings"
+    - export DJANGO_SETTINGS_MODULE="markdowny.tests.settings"
 install:
     - pip install -q Django==$DJANGO_VERSION
     - python setup.py -q install
 script:
-    - django-admin test markdownify.tests
+    - django-admin test markdowny.tests

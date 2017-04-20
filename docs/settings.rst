@@ -7,7 +7,7 @@ The template tag offers one setting that nests options as a dictionary. By defau
 
 .. code-block:: python
 
-   MARKDOWNIFY = {
+   MARKDOWNY = {
        'output_format': 'html5',
        'lazy_ol': False,
    }
@@ -24,7 +24,7 @@ A more customized example might look like:
 
 .. code-block:: python
 
-   MARKDOWNIFY = {
+   MARKDOWNY = {
        'extensions': [
            'abbr',
            'codehilite',

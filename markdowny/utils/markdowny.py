@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 import ast
 
-from markdown import markdown
+from markdown import markdown as _markdown
 
 
 def bits_to_dict(bits):
@@ -22,6 +22,6 @@ def bits_to_dict(bits):
     return options
 
 
-def markdownify(value, **kwargs):
+def markdown(value, **kwargs):
     options = kwargs.get('options', {})
-    return markdown(value, **options)
+    return _markdown(value, **options)

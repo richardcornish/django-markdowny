@@ -4,13 +4,13 @@ from setuptools import find_packages, setup
 
 
 setup(
-    name='django-markdownify',
+    name='django-markdowny',
     version='0.1.0',
     description='A Django template tag to convert Markdown to HTML',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     author='Richard Cornish',
     author_email='rich@richardcornish.com',
-    url='https://github.com/richardcornish/django-markdownify',
+    url='https://github.com/richardcornish/django-markdowny',
     license='BSD License',
     zip_safe=False,
     include_package_data=True,
@@ -18,7 +18,7 @@ setup(
     install_requires=[
         'markdown',
     ],
-    test_suite='markdownify.tests',
+    test_suite='markdowny.tests',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',

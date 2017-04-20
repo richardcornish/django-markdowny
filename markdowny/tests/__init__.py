@@ -4,14 +4,14 @@ from django.template import Context, Template
 from django.test import TestCase
 
 
-class MarkdownifyTestCase(TestCase):
-    """Markdownify test cases."""
+class MarkdownyTestCase(TestCase):
+    """Markdowny test cases."""
 
-    def test_markdownify(self):
+    def test_markdowny(self):
         out = Template(
-            "{% load markdownify_tags %}"
-            "{% markdownify %}"
+            "{% load markdowny_tags %}"
+            "{% markdowny %}"
             '# Hello, world!'
-            "{% endmarkdownify %}"
+            "{% endmarkdowny %}"
         ).render(Context())
         self.assertEqual(out, '<h1>Hello, world!</h1>')
