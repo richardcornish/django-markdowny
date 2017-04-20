@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=django-markdownify
+set SPHINXPROJ=django-markdowny
 
 if "%1" == "" goto help
 

@@ -41,7 +41,7 @@ Usage
 
 .. code-block:: django
 
-   {% load markdownify_tags %}
+   {% load markdowny_tags %}
 
    {% markdowny %}
    # Hello, world!
