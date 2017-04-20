@@ -16,7 +16,7 @@ Django Markdowny
 
 **Django Markdowny** is a `Django <https://www.djangoproject.com/>`_ `template tag <https://docs.djangoproject.com/en/1.11/howto/custom-template-tags/>`_ application to convert `Markdown <http://daringfireball.net/projects/markdown/>`_ to HTML.
 
-Unlike other Django/Markdown filters, markdowny supports all of the options available in `Python Markdown <https://pythonhosted.org/Markdown/reference.html>`_ via settings.
+Unlike other Django/Markdown filters, markdowny supports all of the options available in `Python Markdown <https://pythonhosted.org/Markdown/reference.html>`_ via :ref:`Settings`.
 
 * `Package distribution <https://pypi.python.org/pypi/django-markdowny>`_
 * `Code repository <https://github.com/richardcornish/django-markdowny>`_
