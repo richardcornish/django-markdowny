@@ -37,7 +37,7 @@ Additionally customize the behavior of the ``{% markdowny %}`` tag with keyword 
    # Hello, world!
    {% endmarkdowny %}
 
-Because Django's template language is not Python, template tags expect either a string or a number as a keyword argument. Therefore, in instances when Pygments's ``HtmlFormatter`` constructor expects a Python data type, such as a string, number, boolean, or list, the value of the keyword argument should be the equivalent string or number. For example, pass ``'true'`` as the equivalent of ``True`` or ``'[...]'`` as the equivalent of ``[...]``. Numbers can be left as is. All keyword arguments are later coerced into Python data types.
+Because Django's template language is not Python, template tags expect either a string or a number as a keyword argument. Therefore, in instances when Python Markdown's ``Markdown`` constructor expects a Python data type, such as a string, number, boolean, or list, the value of the keyword argument should be the equivalent string or number. For example, pass ``'true'`` as the equivalent of ``True`` or ``'[...]'`` as the equivalent of ``[...]``. Numbers can be left as is. All keyword arguments are later coerced into Python data types.
 
 See Python Markdown's documentation on the |Markdown|_ class for all available keyword arguments.
 
