@@ -1,11 +1,17 @@
 from __future__ import unicode_literals
 
 from django import template
+from django.utils.safestring import mark_safe
 
 from ..utils.markdowny import bits_to_dict, markdown as _markdown
 from .. import settings
 
 register = template.Library()
+
+
+@register.filter(name='markdowny')
+def markdowny_filter(value):
+    return mark_safe(_markdown(value, options=settings.MARKDOWNY))
 
 
 class MarkdownyNode(template.Node):
@@ -18,8 +24,8 @@ class MarkdownyNode(template.Node):
         return _markdown(output, options=self.options)
 
 
-@register.tag
-def markdowny(parser, token):
+@register.tag(name='markdowny')
+def markdowny_tag(parser, token):
 
     # Convert tag kwargs to dictionary
     bits = token.split_contents()

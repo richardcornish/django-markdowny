@@ -39,16 +39,22 @@ Add to ``settings.py``.
 Usage
 =====
 
+Use as a template tag.
+
 .. code-block:: django
 
    {% load markdowny_tags %}
 
-   {% markdowny %}
-   # Hello, world!
-   {% endmarkdowny %}
+   {% markdowny %}Hello, world!{% endmarkdowny %}
+
+Or as a template filter.
+
+.. code-block:: django
+
+   {{ post.body|markdowny }}
 
 Result:
 
 .. code-block:: html
 
-   <h1>Hello, world!</h1>
+   <p>Hello, world!</p>
