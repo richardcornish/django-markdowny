@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='django-markdowny',
-    version='0.1.1',
+    version='0.1.2',
     description='A Django template tag to convert Markdown to HTML',
     long_description=open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'README.rst')).read(),
     author='Richard Cornish',
@@ -27,6 +27,7 @@ setup(
         'Framework :: Django :: 1.9',
         'Framework :: Django :: 1.10',
         'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.0',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
