@@ -5,20 +5,20 @@ Django Markdowny
 
 .. |PyPI version| image::
    https://badge.fury.io/py/django-markdowny.svg
-.. _PyPI version: https://pypi.python.org/pypi/django-markdowny
+.. _PyPI version: https://pypi.org/project/django-markdowny/
 
 .. |Build status| image::
-   https://travis-ci.org/richardcornish/django-markdowny.svg?branch=master
-.. _Build status: https://travis-ci.org/richardcornish/django-markdowny
+   https://api.travis-ci.com/richardcornish/django-markdowny.svg?branch=master
+.. _Build status: https://app.travis-ci.com/github/richardcornish/django-markdowny
 
-**Django Markdowny** is a `Django <https://www.djangoproject.com/>`_ `template tag <https://docs.djangoproject.com/en/1.11/howto/custom-template-tags/>`_ application to convert `Markdown <http://daringfireball.net/projects/markdown/>`_ to HTML.
+**Django Markdowny** is a `Django <https://www.djangoproject.com/>`_ `template tag <https://docs.djangoproject.com/en/dev/howto/custom-template-tags/>`_ application to convert `Markdown <https://daringfireball.net/projects/markdown/>`_ into HTML with `Python-Markdown <https://python-markdown.github.io/>`_.
 
-Unlike other Django/Markdown filters, Markdowny supports all of the options available in `Python Markdown <https://pythonhosted.org/Markdown/reference.html>`_ via `settings <https://django-markdowny.readthedocs.io/en/latest/settings.html>`_.
+Unlike other Django-Markdown filters, Markdowny supports `all of the options <https://python-markdown.github.io/reference/>`_ in Python-Markdown via `settings <https://django-markdowny.readthedocs.io/en/latest/settings.html>`_.
 
-* `Package distribution <https://pypi.python.org/pypi/django-markdowny>`_
-* `Code repository <https://github.com/richardcornish/django-markdowny>`_
+* `Package <https://pypi.org/project/django-markdowny/>`_
+* `Source <https://github.com/richardcornish/django-markdowny>`_
 * `Documentation <https://django-markdowny.readthedocs.io/>`_
-* `Tests <https://travis-ci.org/richardcornish/django-markdowny>`_
+* `Tests <https://app.travis-ci.com/github/richardcornish/django-markdowny>`_
 
 Install
 =======

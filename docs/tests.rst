@@ -10,12 +10,12 @@ However, you can also test the source code.
 .. code-block:: bash
 
    $ workon myvenv
-   $ django-admin test markdowny.tests --settings="markdowny.tests.settings"
+   (myvenv)$ django-admin test markdowny.tests --settings="markdowny.tests.settings"
    
-   Creating test database for alias 'default'...
-   ..........
+   System check identified no issues (0 silenced).
+   ............
    ----------------------------------------------------------------------
-   Ran 1 tests in 0.140s
+   Ran 12 tests in 0.154s
    
    OK
    Destroying test database for alias 'default'...
