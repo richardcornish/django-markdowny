@@ -46,7 +46,7 @@ At the time of this writing, arguments include:
 * ``output_format``
 * ``tab_length``
 
-Django's template language `cannot interpret native Python code <https://docs.djangoproject.com/en/dev/ref/templates/language/>`_. However, keyword arguments in template tags can declaratively accept strings and numbers; that is, when specifying ``output_format`` and/or ``tab_length``, their values--`'xhtml'` and `2` in the prior example, respectively--can be assigned upon declaration. The other keyword arguments--``extensions`` and ``extension_configs``--cannot accept a declarative assignment because |markdown|_ expects a native Python list and dictionary, respectively.
+Django's template language `cannot interpret native Python code <https://docs.djangoproject.com/en/dev/ref/templates/language/>`_. However, keyword arguments in template tags can declaratively accept strings and numbers; that is, when specifying ``output_format`` and/or ``tab_length``, their values--``'xhtml'`` and ``2`` in the prior example, respectively--can be assigned upon declaration. The other keyword arguments--``extensions`` and ``extension_configs``--cannot accept a declarative assignment because |markdown|_ expects a native Python list and dictionary, respectively.
 
 Therefore, if specifying ``extensions`` and/or ``extension_configs`` in the template tag, their values should be made available by the template context. For example, if one wanted ``extensions`` declared in the template tag and ``my_extensions`` existed in the template context:
 
@@ -76,5 +76,5 @@ If a required template variable does not exist in the context, then its value fr
 .. warning::
     Previous versions of the template tag expected keyword arguments as strings mimicking the appearance of native Python types; e.g., ``{% markdowny extensions='["abbr"]' %}Hello, world!{% endmarkdowny %}``. This is always a bad idea, and the behavior has since been removed.
 
-.. |Markdown| replace:: ``Markdown``
-.. _Markdown: https://python-markdown.github.io/reference/#markdown
+.. |markdown| replace:: ``markdown``
+.. _markdown: https://python-markdown.github.io/reference/#markdown
