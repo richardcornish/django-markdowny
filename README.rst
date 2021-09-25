@@ -8,7 +8,7 @@ Django Markdowny
 .. _PyPI version: https://pypi.org/project/django-markdowny/
 
 .. |Build status| image::
-   https://api.travis-ci.com/richardcornish/django-markdowny.svg?branch=master
+   https://api.travis-ci.com/richardcornish/django-markdowny.svg?branch=main
 .. _Build status: https://app.travis-ci.com/github/richardcornish/django-markdowny
 
 **Django Markdowny** is a `Django <https://www.djangoproject.com/>`_ `template tag <https://docs.djangoproject.com/en/dev/howto/custom-template-tags/>`_ application to convert `Markdown <https://daringfireball.net/projects/markdown/>`_ into HTML with `Python-Markdown <https://python-markdown.github.io/>`_.
