@@ -47,7 +47,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "django-markdowny"
-copyright = "2017, Richard Cornish"
+copyright = "2021, Richard Cornish"
 author = "Richard Cornish"
 
 # The version info for the project you're documenting, acts as replacement for
