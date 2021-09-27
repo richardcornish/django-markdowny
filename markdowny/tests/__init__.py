@@ -1,5 +1,7 @@
 from django.template import Context, Template
-from django.test import TestCase
+from django.test import TestCase, override_settings
+
+from .. import settings
 
 
 class MarkdownyTestCase(TestCase):
@@ -104,9 +106,7 @@ class MarkdownyTestCase(TestCase):
             "HTML\n*[HTML]: HyperText Markup Language"
             "{% endmarkdowny %}"
         ).render(Context())
-        self.assertEqual(
-            out, '<p>HTML\n*[HTML]: HyperText Markup Language</p>'
-        )
+        self.assertEqual(out, "<p>HTML\n*[HTML]: HyperText Markup Language</p>")
 
     def test_tag_extension_configs(self):
         out = Template(
@@ -138,3 +138,25 @@ class MarkdownyTestCase(TestCase):
             "</ol>\n"
             "</div>",
         )
+
+    def test_tag_settings_override(self):
+        settings.MARKDOWNY["output_format"] = "xhtml"
+        with override_settings(MARKDOWNY=settings.MARKDOWNY):
+            out = Template(
+                "{% load markdowny_tags %}"
+                "{% markdowny %}"
+                "Hello,  \nworld!"
+                "{% endmarkdowny %}"
+            ).render(Context())
+            self.assertEqual(out, "<p>Hello,<br />\nworld!</p>")
+
+    def test_tag_settings_override_override(self):
+        settings.MARKDOWNY["output_format"] = "xhtml"
+        with override_settings(MARKDOWNY=settings.MARKDOWNY):
+            out = Template(
+                "{% load markdowny_tags %}"
+                "{% markdowny output_format='html' %}"
+                "Hello,  \nworld!"
+                "{% endmarkdowny %}"
+            ).render(Context())
+            self.assertEqual(out, "<p>Hello,<br>\nworld!</p>")
