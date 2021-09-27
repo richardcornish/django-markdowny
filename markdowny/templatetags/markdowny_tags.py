@@ -1,58 +1,44 @@
 from django import template
+from django.template.base import FilterExpression
 from django.template.defaultfilters import stringfilter
-from django.utils.html import escape
 from django.utils.safestring import mark_safe
 
-from ..utils.markdowny import markdown as _markdown
+from ..utils.markdowny import markdown as _markdown, parse_tag
 from .. import settings
 
 register = template.Library()
 
 
-@register.filter(name="markdowny", is_safe=True, needs_autoescape=True)
+@register.filter(name="markdowny", is_safe=True)
 @stringfilter
-def markdowny_filter(value, autoescape=True):
-    value = escape(value) if autoescape else value
+def markdowny_filter(value):
     return mark_safe(_markdown(value, **settings.MARKDOWNY))
 
 
 class MarkdownyNode(template.Node):
-    def __init__(self, nodelist, options):
+    def __init__(self, nodelist, kwargs):
         self.nodelist = nodelist
-        self.options = options
+        self.kwargs = kwargs
 
     def render(self, context):
         output = self.nodelist.render(context)
-        for key in self.options:
-            if isinstance(self.options[key], template.Variable):
+        for key in self.kwargs:
+            if isinstance(self.kwargs[key], FilterExpression):
                 try:
-                    self.options[key] = self.options[key].resolve(context)
+                    self.kwargs[key] = self.kwargs[key].resolve(context)
                 except template.VariableDoesNotExist:
-                    self.options[key] = settings.MARKDOWNY[key]
-        return mark_safe(_markdown(output, **self.options))
+                    self.kwargs[key] = settings.MARKDOWNY[key]
+        return mark_safe(_markdown(output, **self.kwargs))
 
 
 @register.tag(name="markdowny")
 def markdowny_tag(parser, token):
-    bits = token.split_contents()[1:]
+    # Parse tag contents
+    tag_name, args, kwargs = parse_tag(parser, token)
 
-    # Create dictionary from tag keyword arguments
-    tag_options = {bit.split("=")[0]: bit.split("=")[1] for bit in bits}
-
-    # Coerce arguments because token.split_contents() unpacks string literals
-    for key in tag_options:
-        s = tag_options[key]
-        if (s[0] == s[-1]) and s.startswith(("'", '"')):
-            tag_options[key] = s[1:-1]
-        else:
-            try:
-                tag_options[key] = int(s)
-            except ValueError:
-                tag_options[key] = template.Variable(s)
-
-    # Update settings options with tag options
+    # Update settings with tag keyword arguments
     options = settings.MARKDOWNY.copy()
-    options.update(tag_options)
+    options.update(kwargs)
 
     nodelist = parser.parse(("endmarkdowny",))
     parser.delete_first_token()
