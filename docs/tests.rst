@@ -3,7 +3,7 @@
 Tests
 *****
 
-`Continuous integration test results <https://travis-ci.org/richardcornish/django-markdowny>`_ are available online.
+`Continuous integration test results <https://app.travis-ci.com/github/richardcornish/django-markdowny>`_ are available online.
 
 However, you can also test the source code.
 
@@ -11,11 +11,11 @@ However, you can also test the source code.
 
    $ workon myvenv
    (myvenv)$ django-admin test markdowny.tests --settings="markdowny.tests.settings"
-   
+   Creating test database for alias 'default'...
    System check identified no issues (0 silenced).
-   ............
+   ..............
    ----------------------------------------------------------------------
-   Ran 12 tests in 0.154s
+   Ran 14 tests in 0.120s
    
    OK
    Destroying test database for alias 'default'...
