@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="django-markdowny",
-    version="0.2.1",
+    version="0.2.2",
     description="A Django template tag to convert Markdown into HTML",
     long_description=open(
         os.path.join(os.path.dirname(os.path.abspath(__file__)), "README.rst")
