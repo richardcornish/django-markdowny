@@ -9,7 +9,7 @@ However, you can also test the source code.
 
 .. code-block:: bash
 
-   $ workon myvenv
+   $ source myvenv/bin/activate
    (myvenv)$ django-admin test markdowny.tests --settings="markdowny.tests.settings"
    Creating test database for alias 'default'...
    System check identified no issues (0 silenced).
