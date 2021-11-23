@@ -4,7 +4,7 @@
 Django Markdowny
 ****************
 
-|PyPI version|_ |Build status|_
+|PyPI version|_ |Build status|_ |Documentation status|_
 
 .. |PyPI version| image::
    https://badge.fury.io/py/django-markdowny.svg
@@ -13,6 +13,10 @@ Django Markdowny
 .. |Build status| image::
    https://api.travis-ci.com/richardcornish/django-markdowny.svg?branch=main
 .. _Build status: https://app.travis-ci.com/github/richardcornish/django-markdowny
+
+.. |Documentation status| image::
+   https://readthedocs.org/projects/django-markdowny/badge/?version=latest
+.. _Documentation status: https://django-markdowny.readthedocs.io/en/latest/?badge=latest
 
 **Django Markdowny** is a `Django <https://www.djangoproject.com/>`_ `template tag <https://docs.djangoproject.com/en/dev/howto/custom-template-tags/>`_ application to convert `Markdown <https://daringfireball.net/projects/markdown/>`_ into HTML with `Python-Markdown <https://python-markdown.github.io/>`_.
 
