@@ -1,11 +1,5 @@
 from django.template.base import FilterExpression, kwarg_re
 
-from markdown import markdown as _markdown
-
-
-def markdown(text, **kwargs):
-    return _markdown(text, **kwargs)
-
 
 def parse_tag(parser, token):
     bits = token.split_contents()
@@ -20,5 +14,4 @@ def parse_tag(parser, token):
             kwargs[key] = FilterExpression(value, parser)
         else:
             args.append(FilterExpression(bit, parser))
-
     return (tag_name, args, kwargs)

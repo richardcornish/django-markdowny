@@ -3,7 +3,9 @@ from django.template.base import FilterExpression
 from django.template.defaultfilters import stringfilter
 from django.utils.safestring import mark_safe
 
-from ..utils.markdowny import markdown as _markdown, parse_tag
+from markdown import markdown
+
+from ..utils.markdowny import parse_tag
 from .. import settings
 
 register = template.Library()
@@ -12,7 +14,7 @@ register = template.Library()
 @register.filter(name="markdowny", is_safe=True)
 @stringfilter
 def markdowny_filter(value):
-    return mark_safe(_markdown(value, **settings.MARKDOWNY))
+    return mark_safe(markdown(value, **settings.MARKDOWNY))
 
 
 class MarkdownyNode(template.Node):
@@ -28,7 +30,7 @@ class MarkdownyNode(template.Node):
                     self.kwargs[key] = self.kwargs[key].resolve(context)
                 except template.VariableDoesNotExist:
                     self.kwargs[key] = settings.MARKDOWNY[key]
-        return mark_safe(_markdown(output, **self.kwargs))
+        return mark_safe(markdown(output, **self.kwargs))
 
 
 @register.tag(name="markdowny")
