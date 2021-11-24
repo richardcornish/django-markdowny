@@ -8,8 +8,8 @@ Django Markdowny
 .. _PyPI version: https://pypi.org/project/django-markdowny/
 
 .. |Build status| image::
-   https://api.travis-ci.com/richardcornish/django-markdowny.svg?branch=main
-.. _Build status: https://app.travis-ci.com/github/richardcornish/django-markdowny
+   https://github.com/richardcornish/django-markdowny/actions/workflows/main.yml/badge.svg
+.. _Build status: https://github.com/richardcornish/django-markdowny/actions/workflows/main.yml
 
 .. |Documentation status| image::
    https://readthedocs.org/projects/django-markdowny/badge/?version=latest
@@ -22,7 +22,7 @@ Unlike other Django-Markdown filters, Markdowny supports `all of the options <ht
 * `Package <https://pypi.org/project/django-markdowny/>`_
 * `Source <https://github.com/richardcornish/django-markdowny>`_
 * `Documentation <https://django-markdowny.readthedocs.io/>`_
-* `Tests <https://app.travis-ci.com/github/richardcornish/django-markdowny>`_
+* `Tests <https://github.com/richardcornish/django-markdowny/actions/workflows/main.yml>`_
 
 Install
 =======

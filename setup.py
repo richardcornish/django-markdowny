@@ -18,10 +18,6 @@ setup(
     packages=find_packages(exclude=("tests",)),
     include_package_data=True,
     zip_safe=False,
-    install_requires=[
-        "markdown",
-    ],
-    test_suite="markdowny.tests",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
@@ -41,4 +37,6 @@ setup(
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     ],
+    python_requires=">=3.6",
+    install_requires=["markdown", "Django>=2.2,<4.0"],
 )
