@@ -41,10 +41,22 @@ Additionally customize the behavior of the ``{% markdowny %}`` tag with keyword 
 
 At the time of this writing, arguments include:
 
-* ``extensions``
-* ``extension_configs``
-* ``output_format``
-* ``tab_length``
+* |extensions|_
+* |extension_configs|_
+* |output_format|_
+* |tab_length|_
+
+.. |extensions| replace:: ``extensions``
+.. _extensions: https://python-markdown.github.io/reference/#extensions
+
+.. |extension_configs| replace:: ``extension_configs``
+.. _extension_configs: https://python-markdown.github.io/reference/#extension_configs
+
+.. |output_format| replace:: ``output_format``
+.. _output_format: https://python-markdown.github.io/reference/#output_format
+
+.. |tab_length| replace:: ``tab_length``
+.. _tab_length: https://python-markdown.github.io/reference/#tab_length
 
 Django's template language `cannot interpret native Python code <https://docs.djangoproject.com/en/dev/ref/templates/language/>`_. However, keyword arguments in template tags can declaratively accept strings and numbers; that is, when specifying ``output_format`` and/or ``tab_length``, their values--``'xhtml'`` and ``2`` in the prior example, respectively--can be assigned upon declaration. The other keyword arguments--``extensions`` and ``extension_configs``--cannot accept a declarative assignment because |markdown|_ expects a native Python list and dictionary, respectively.
 
