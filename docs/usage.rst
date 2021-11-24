@@ -22,7 +22,7 @@ Or use it as a template filter.
 
 .. code-block:: django
 
-   {{ post.body|markdowny }}
+   {{ 'Hello, world!'|markdowny }}
 
 Result:
 
